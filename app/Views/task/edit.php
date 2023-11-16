@@ -21,17 +21,17 @@
         </div>
         <div class="mb-3">
             <label for="task" class="form-label">Due Date :</label>
-            <input class="form-control" type="date" id="dueDate" name = dueDate value ="<?= $task_data->dueDate ?>">
+            <input class="form-control" type="date" id="dueDate" name = dueDate value ="<?= $task_data->dueDate ?>" Required>
         </div>
         <div class="mb-3">
             <label for="task" class="form-label">User :</label>
             <select class="form-select" aria-label="Default select example" name = "assignedToString" id="assignedToString">
                 <?php foreach($users as $user): ?>
-                    <option value="<?= $user->name ?>"
-                        <?php if ($task_data->assignedToString == $user->name): ?>
+                    <option value="<?= $user->username ?>"
+                        <?php if ($task_data->assignedToString == $user->username): ?>
                             <?php echo "selected" ?>
                         <?php endif?>
-                    ><?= $user->name ?></option>
+                    ><?= $user->username ?></option>
                 <?php endforeach; ?>
             </select>
         </div>

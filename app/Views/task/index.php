@@ -31,7 +31,7 @@
         <th scope="row"><?php echo $i ?></th>
         <td><?= $task->task ?></td>
         <td><?= $task->assignedToString ?></td>
-        <td><?= $task->done ?></td>
+        <td><?= $task->done == 1 ? '✅' : '❌' ?></td>
         <td><?= $task->dueDate ?></td>
         <td>
           <a href="<?= base_url('/editTask')."/".$task->id ?>" class = "btn btn-warning">Edit</a>

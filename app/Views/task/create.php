@@ -20,13 +20,13 @@
         </div>
         <div class="mb-3">
             <label for="task" class="form-label">Due Date :</label>
-            <input class="form-control" type="date" id="dueDate" name = dueDate>
+            <input class="form-control" type="date" id="dueDate" name = dueDate Required>
         </div>
         <div class="mb-3">
             <label for="task" class="form-label">User :</label>
             <select class="form-select" aria-label="Default select example" name = "assignedToString" id="assignedToString">
                 <?php foreach($users as $user): ?>
-                    <option value="<?= $user->name ?>"><?= $user->name ?></option>
+                    <option value="<?= $user->username ?>"><?= $user->username ?></option>
                 <?php endforeach; ?>
             </select>
         </div>

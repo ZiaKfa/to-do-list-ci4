@@ -14,29 +14,28 @@
     <div class="container">
         <h1 class="text-center">Users Table</h1>
         <table class="table">
-  <thead>
-    <tr>
-      <th scope="col">No.</th>
-      <th scope="col">User</th>
-      <th scope="col">Action</th>
-    </tr>
-  </thead>
-  <tbody>
-    <?php $i = 1; ?>
-    <?php foreach($users as $user): ?>
-      <tr>
-        <th scope="row"><?php echo $i ?></th>
-        <td><?= $user->name ?></td>
-        <td>
-          <a href="<?= base_url('/editUser')."/".$user->id ?>" class = "btn btn-warning">Edit</a>
-          <a href="<?= base_url('/deleteUser')."/".$user->id ?>" class = "btn btn-danger">Delete</a>
-        </td>
-      </tr>
-      <?php $i++;?>
-    <?php endforeach; ?>
-  </tbody>
+      <thead>
+        <tr>
+          <th class="col-3">No.</th>
+          <th class="col-6">User</th>
+          <th class="col-3">Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <?php $i = 1; ?>
+        <?php foreach($users as $user): ?>
+          <tr>
+            <th scope="row"><?php echo $i ?></th>
+            <td><?= $user->username ?></td>
+            <td>
+              <a href="<?= base_url('/editUser')."/".$user->id ?>" class = "btn btn-warning">Edit</a>
+              <a href="<?= base_url('/deleteUser')."/".$user->id ?>" class = "btn btn-danger">Delete</a>
+            </td>
+          </tr>
+          <?php $i++;?>
+        <?php endforeach; ?>
+      </tbody>
 </table>
-<a href="<?= base_url('/addUser') ?>" class = "btn btn-primary">Add new user</a>
 <a href="<?= base_url('/') ?>" class = "btn btn-primary">Back to Home</a>
     </div>
     

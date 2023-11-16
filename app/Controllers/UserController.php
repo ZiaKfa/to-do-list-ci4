@@ -16,7 +16,9 @@ class UserController extends BaseController{
     public function store(){
         $user = new Users();
         $data = [
-            'name' => $this->request->getPost('name'),
+            'username' => $this->request->getPost('name'),
+            'email'=> $this->request->getPost('email'),
+            'password_hash'=> password_hash($this->request->getPost('password'), PASSWORD_DEFAULT)
         ];
         $user->insert($data);
         return redirect()->to('/user');
@@ -29,7 +31,8 @@ class UserController extends BaseController{
     public function update(){
         $user = new Users();
         $data = [
-            'name' => $this->request->getPost('name'),
+            'username' => $this->request->getPost('name'),
+            'email'=> $this->request->getPost('email'),
         ];
         $user->update($this->request->getPost('id'), $data);
         return redirect()->to('/user');

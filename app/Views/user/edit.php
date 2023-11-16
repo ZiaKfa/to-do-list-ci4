@@ -17,7 +17,11 @@
         <input type="hidden" id="id" name = "id" value ="<?= $user_data->id ?>">
         <div class="mb-3">
             <label for="user" class="form-label">User :</label>
-            <input type="text" class="form-control" id="name" name ="name" value ="<?= $user_data->name ?>" >
+            <input type="text" class="form-control" id="name" name ="name" value ="<?= $user_data->username ?>" >
+        </div>
+        <div class="mb-3">
+            <label for="email" class="form-label">Email :</label>
+            <input type="email" class="form-control" id="email" name ="email" value ="<?= $user_data->email ?>">
         </div>
         <div class = "mb-3">
             <button type = submit class = "btn btn-primary" name = "submit" id = "submit">Submit</button>

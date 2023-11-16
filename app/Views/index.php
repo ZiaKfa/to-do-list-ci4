@@ -11,15 +11,18 @@
         <title>Hello, world!</title>
     </head>
     <body>
-        <h1 class ="text-center">Welcome To Our Todo App!</h1>
-        <div class="container">
-            <div class="row justify-content-center mt-5">
-                <div class="col-md-2">
-                    <a href="/user" class="btn btn-primary btn-lg d-block mb-3">User Table</a>
-                    <a href="/task" class="btn btn-primary btn-lg d-block">Task Table</a>
-                </div>
-            </div>
+        
+<div class="container d-flex flex-column justify-content-center align-items-center" style="min-height: 100vh;">
+    <h1 class="text-center">Welcome To Our Todo App!</h1>
+    <div class="row justify-content-center mt-5">
+        <div>
+            <a href="/user" class="btn btn-info btn-lg d-block mb-3">User Table</a>
+            <a href="/task" class="btn btn-info btn-lg d-block mb-3">Task Table</a>
+            <a href="/logout" class="btn btn-danger btn-lg d-block">Logout</a>
         </div>
+    </div>
+
+
     
 
             <!-- Optional JavaScript; choose one of the two! -->
