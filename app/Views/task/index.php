@@ -31,7 +31,11 @@
         <th scope="row"><?php echo $i ?></th>
         <td><?= $task->task ?></td>
         <td><?= $task->assignedToString ?></td>
-        <td><?= $task->done == 1 ? '✅' : '❌' ?></td>
+        <td><form action="<?= base_url('/taskToggle')."/".$task->id ?>" method="post">
+            <input type="hidden" id="id" name = "id" value ="<?= $task->id ?>">
+            <input type="hidden" id="done" name = "done" value ="<?= $task->done ?>">
+            <button type = submit name = "submit" id = "submit"><?= $task->done == 1 ? '✅' : '❌' ?></button>
+          </form></td>
         <td><?= $task->dueDate ?></td>
         <td>
           <a href="<?= base_url('/editTask')."/".$task->id ?>" class = "btn btn-warning">Edit</a>

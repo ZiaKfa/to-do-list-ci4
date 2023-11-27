@@ -10,9 +10,6 @@ class UserController extends BaseController{
         $alluser = $users->findAll();
         return view('user/index', ['users' => $alluser]);
     }
-    public function create(){
-        return view('user/create');
-    }
     public function store(){
         $user = new Users();
         $data = [

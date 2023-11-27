@@ -50,4 +50,14 @@ class TaskController extends BaseController{
         $task->delete($id);
         return redirect()->to('/task');
     }
+    public function toggle($id){
+        $task = new Tasks();
+        $id = $this->request->getPost('id');
+        $task_data = $task->find($id);
+        $data = [
+            'done' => $task_data->done ? 0 : 1,
+        ];
+        $task->update($id, $data);
+        return redirect()->to('/task');
+    }
 }

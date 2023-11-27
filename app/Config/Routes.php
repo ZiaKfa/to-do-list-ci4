@@ -9,6 +9,7 @@ $routes->get('/', 'Home::index');
 $routes->get('/task', 'TaskController::index');
 $routes->get('/addTask', 'TaskController::create');
 $routes->post('/storeTask', 'TaskController::store');
+$routes->post('/taskToggle/(:num)', 'TaskController::toggle/$1');
 $routes->get('/editTask/(:num)', 'TaskController::edit/$1');
 $routes->post('/updateTask', 'TaskController::update');
 $routes->get('/deleteTask/(:num)', 'TaskController::delete/$1');
